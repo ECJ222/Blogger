@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+   
+  <!-- Bootstrap core CSS -->
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+   <link href="css/blog-post.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+	<title>About us</title>
+</head>
+<body>
+
+    
+  <div class="container">
+    <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'logoutt' %}">Blogger</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'logout' %}">Logout
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'logoutt' %}">Welcome {{user}}!</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about1' %}">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'contact1' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <div class="page-block" style="position: relative; top: 150px;">
+  	<div class="container">
+  		<h1 itemprop="headline name">About Us</h1>
+  		<div class="text" itemprop="articleBody">
+  			<div class="h10"></div>
+  			<p>We’ve seen and done it all and came together to start First Site Guide because we believe in the web for everyone. We can help you start a personal or business blog/site, a place to show your hobbies, offer advice to others or just to share personal stories, pictures and videos.</p>
+  			<div class="h10"></div>
+  			<p>The web is a great place to be and make new connections from all parts of the world or just your own neighborhood. Buy, sell, share your hobby passion or just educate and entertain. We want you to be a part of it, and we can help you to get there with our useful resources and easy to follow step-by-step Free guides.</p>
+  			<div class="h10"></div>
+  			<p>Once we get you there, don’t forget to check back in for news, advice, social media and marketing articles to help you navigate the digital highway. Bookmark us, like us, follow us and we’ll be your digital information source. If you have any questions feel free to <a href="{%url 'contact1' %}">contact us</a> at any time.
+  				</p>
+  		</div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

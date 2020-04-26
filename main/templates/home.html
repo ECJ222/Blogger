@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Django-Blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog-post.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  
+
+</head>
+
+<body>
+   <div class="container">
+    <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'blog' %}">Blogger</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'blog' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
+          </li>
+          <li class="nav-item active">
+             {% csrf_token %}
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+
+  
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        {% csrf_token %}
+        {% for message in messages %}
+            <div class="alert alert-success" role="alert" id="messages" style="position: relative; top: 70px;">
+               {{message}}
+            </div>
+        {% endfor %}
+
+        <form action="" method="post">
+        {% csrf_token %}
+
+           {% for post in info %}
+              
+              <h1 class="pt-5 mt-5">{{post.title}}</h1>
+              <hr>
+              <p >Posted on {{post.due_date|date:"F d, Y"}}</p>
+              <hr>
+              <p class="lead" name="content">{{post.content}}</p>
+        {% endfor %}
+
+      </div>
+      </form>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4" style="position: relative; top: 48px;">
+
+        <!-- Search Widget -->
+        <form method="post">
+          {% csrf_token %}
+        <div class="card my-4">
+          <h5 class="card-header">Search</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" name="info" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" name="search" type="submit"><a href="https://www.google.com/search?client=ubuntu&channel=fs&q={{search}}&ie=utf-8&oe=utf-8">Go!</a></button>
+              </span>
+            </div>
+          </div>
+        </div>
+        </form>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=web+design&ie=utf-8&oe=utf-8">Web Design</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=HTML&ie=utf-8&oe=utf-8">HTML</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=Freebies&ie=utf-8&oe=utf-8">Freebies</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=JavaScript&ie=utf-8&oe=utf-8">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=CSS&ie=utf-8&oe=utf-8">CSS</a>
+                  </li>
+                  <li>
+                    <a href="https://www.tutorialspoint.com/index.htm">Tutorials</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Side Widget -->
+        <form action="" method="post">
+          {% csrf_token %}
+        <div class="card my-4">
+          <h5 class="card-header">To Make A Post</h5>
+          <div class="card-body">
+            <a href="{% url 'signup' %}">You Need To Sign Up</a>
+            <h3>or</h3>
+            <a href="{% url 'login' %}">If you already have an account?</a>
+          </div>
+        </div>
+       </form>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  
+  
+</body>
+
+</html>
