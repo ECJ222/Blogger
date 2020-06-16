@@ -37,7 +37,7 @@ django-allauth==0.42.0
 django-cors-headers==3.2.1
 django-rest-auth==0.9.5
 django-rest-authtoken==1.2.4
-djangorestframework==3.6.4
+djangorestframework==3.9.1
 djangotoolbox==1.8.0
 EasyProcess==0.2.10
 emoji==0.5.4
