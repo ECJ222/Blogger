@@ -1,2 +1,2 @@
 # Blogger
-Django Blog
+Blogger.com clone
