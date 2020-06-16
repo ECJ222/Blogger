@@ -1,2 +1,2 @@
 # Blogger
-Blogger.com clone
+Blogger.com clone built with Django
