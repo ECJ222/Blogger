@@ -1,0 +1,2 @@
+# Blogger
+Django Blog
