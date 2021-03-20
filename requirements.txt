@@ -74,7 +74,7 @@ indicator-cpufreq==0.2.2
 instapy==0.6.8
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
-Jinja2==2.10.3
+Jinja2==2.11.3
 jsondiff==1.1.1
 jsonschema==2.6.0
 kaitaistruct==0.8
