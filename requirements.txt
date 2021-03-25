@@ -142,7 +142,7 @@ python3-openid==3.1.0
 pytz==2019.3
 PyVirtualDisplay==0.2.5
 pyxdg==0.25
-PyYAML==5.3
+PyYAML==5.4
 pyzmq==16.0.2
 regex==2020.1.8
 reportlab==3.4.0
