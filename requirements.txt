@@ -87,7 +87,7 @@ lazr.uri==1.0.3
 ldap3==2.6.1
 lightdm-gtk-greeter-settings==1.2.2
 louis==3.5.0
-lxml==4.2.1
+lxml==4.6.5
 Mako==1.0.7
 MarkupSafe==1.1.1
 matplotlib==2.1.1
