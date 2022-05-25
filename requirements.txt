@@ -127,7 +127,7 @@ pygame==1.9.6
 pygobject==3.26.1
 PyHamcrest==2.0.2
 pyinotify==0.9.6
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyOpenSSL==19.0.0
 pyparsing==2.4.6
 pyperclip==1.7.0
