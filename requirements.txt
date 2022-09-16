@@ -88,7 +88,7 @@ ldap3==2.6.1
 lightdm-gtk-greeter-settings==1.2.2
 louis==3.5.0
 lxml==4.2.1
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.1.1
 matplotlib==2.1.1
 MeaningCloud-python==1.2.1
