@@ -169,7 +169,7 @@ tables==3.4.2
 tornado==6.0.3
 tqdm==4.42.1
 traitlets==4.3.2
-Twisted==20.3.0
+Twisted==22.10.0
 txaio==20.4.1
 ubuntu-drivers-common==0.0.0
 ufw==0.36
